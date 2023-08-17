@@ -1,0 +1,29 @@
+<p>
+    <p-button label="Route" (click)="route()"></p-button>
+</p>
+
+<div style="display: flex; gap: 10px;">
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th><input type="checkbox" name="all" (change)="selectAll($event)"></th>
+                    <th>#</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let point of data; index as i">
+                    <td><input type="checkbox" [value]="point" [name]="i" [id]="i"></td>
+                    <td>{{i+1}}</td>
+                    <td>{{point[0]}}</td>
+                    <td>{{point[1]}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <app-map #map></app-map>
+    </div>
+</div>

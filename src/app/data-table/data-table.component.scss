@@ -1,0 +1,17 @@
+table,
+thead,
+tr,
+th,
+td {
+    border-collapse: collapse;
+    border: 1px solid gray;
+}
+
+td {
+    padding: 5px;
+}
+
+tbody {
+    max-height: 80vh;
+    overflow: auto;
+}
