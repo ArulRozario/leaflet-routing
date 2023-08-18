@@ -18,7 +18,7 @@ export class MapComponent implements OnInit {
 
   private renderMap() {
     if(this.map) this.map.remove();
-    this.map = L.map('map').setView([51.505, -0.09], 3);
+    this.map = L.map('map').setView([35.989, 	-80.22],4);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       minZoom:3,
